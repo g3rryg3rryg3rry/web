@@ -65,7 +65,7 @@ async function login() {
   const { error } = await supabase.auth.signInWithOtp({
     email: email.value,
     options: {
-      emailRedirectTo: "https://web-6rr3.onrender.com/",
+      emailRedirectTo: window.location.origin,
     },
   })
   if (error) alert(error.message)
